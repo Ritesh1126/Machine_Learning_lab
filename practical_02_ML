@@ -1,0 +1,123 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Ritesh1126/Machine_Learning_lab/blob/main/practical_02_ML\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "from sklearn.model_selection import train_test_split\n",
+        "from sklearn.preprocessing import LabelEncoder\n",
+        "from sklearn.metrics import (\n",
+        "    accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, confusion_matrix\n",
+        ")\n",
+        "import matplotlib.pyplot as plt\n",
+        "import seaborn as sns\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "OUFv4Bas7cAL"
+      },
+      "execution_count": 7,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "file_path = r\"/content/retail_sales_dataset.csv\"  # Adjust to your file path after uploading\n",
+        "df = pd.read_csv(file_path)\n",
+        "\n",
+        "print(\"Dataset Preview:\")\n",
+        "print(df.head())\n"
+      ],
+      "metadata": {
+        "id": "VVkjxodt7mQr",
+        "outputId": "03dccb24-aa42-4244-b22d-3a4b23495aab",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Dataset Preview:\n",
+            "   Transaction ID        Date Customer ID  Gender  Age Product Category  \\\n",
+            "0               1  2023-11-24     CUST001    Male   34           Beauty   \n",
+            "1               2  2023-02-27     CUST002  Female   26         Clothing   \n",
+            "2               3  2023-01-13     CUST003    Male   50      Electronics   \n",
+            "3               4  2023-05-21     CUST004    Male   37         Clothing   \n",
+            "4               5  2023-05-06     CUST005    Male   30           Beauty   \n",
+            "\n",
+            "   Quantity  Price per Unit  Total Amount  \n",
+            "0         3              50           150  \n",
+            "1         2             500          1000  \n",
+            "2         1              30            30  \n",
+            "3         1             500           500  \n",
+            "4         2              50           100  \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Dataset Preview:\")\n",
+        "print(df.tail())\n"
+      ],
+      "metadata": {
+        "id": "mCpt-QhS79Ev",
+        "outputId": "43cc3b46-773a-4725-8f35-3ffd5524bf86",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Dataset Preview:\n",
+            "     Transaction ID        Date Customer ID  Gender  Age Product Category  \\\n",
+            "995             996  2023-05-16     CUST996    Male   62         Clothing   \n",
+            "996             997  2023-11-17     CUST997    Male   52           Beauty   \n",
+            "997             998  2023-10-29     CUST998  Female   23           Beauty   \n",
+            "998             999  2023-12-05     CUST999  Female   36      Electronics   \n",
+            "999            1000  2023-04-12    CUST1000    Male   47      Electronics   \n",
+            "\n",
+            "     Quantity  Price per Unit  Total Amount  \n",
+            "995         1              50            50  \n",
+            "996         3              30            90  \n",
+            "997         4              25           100  \n",
+            "998         3              50           150  \n",
+            "999         4              30           120  \n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Welcome To Colab",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
