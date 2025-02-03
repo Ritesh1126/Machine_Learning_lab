@@ -39,11 +39,11 @@
         "print(df.head())\n"
       ],
       "metadata": {
-        "id": "VVkjxodt7mQr",
-        "outputId": "03dccb24-aa42-4244-b22d-3a4b23495aab",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "VVkjxodt7mQr",
+        "outputId": "03dccb24-aa42-4244-b22d-3a4b23495aab"
       },
       "execution_count": 10,
       "outputs": [
@@ -76,11 +76,11 @@
         "print(df.tail())\n"
       ],
       "metadata": {
-        "id": "mCpt-QhS79Ev",
-        "outputId": "43cc3b46-773a-4725-8f35-3ffd5524bf86",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "mCpt-QhS79Ev",
+        "outputId": "43cc3b46-773a-4725-8f35-3ffd5524bf86"
       },
       "execution_count": 11,
       "outputs": [
